@@ -6,24 +6,50 @@
   <title>Sisiwenyewe Tech Uganda</title>
 
   <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fa;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       height: 100vh;
-      color: #222;
+      overflow: hidden;
+      color: #fff;
     }
 
+    /* Background video */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* Dark overlay so text is readable */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: -1;
+    }
+
+    /* Content card */
     .card {
-      background: white;
+      background: rgba(255, 255, 255, 0.95);
       padding: 40px;
       border-radius: 10px;
       max-width: 520px;
       text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      color: #222;
     }
 
     h1 {
@@ -42,23 +68,55 @@
       font-size: 14px;
       color: #666;
     }
+
+    /* Center content */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
   </style>
 </head>
 
 <body>
-  <div class="card">
-    <h1>Sisiwenyewe Tech Uganda</h1>
-    <p><strong>Under Construction</strong></p>
-    <p>
-      We are building a secure, intelligent technology platform focused on
-      data-driven decision support, AI systems, and national-scale innovation.
-    </p>
-    <p>
-      Please check back soon.
-    </p>
-    <div class="footer">
-      © 2025 Sisiwenyewe Tech Uganda
+
+  <!-- Background Video -->
+  <video
+    class="video-bg"
+    autoplay
+    muted
+    loop
+    playsinline
+  >
+    <source src="assets/video/background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="card">
+        <h1>Sisiwenyewe</h1>
+        <p><strong>Under Construction</strong></p>
+        <p>
+          Sisiwenyewe is developing secure, intelligent systems that support
+          data-driven decision-making in high-risk and mission-critical environments.
+          Our work focuses on artificial intelligence, sensor-enabled analytics,
+          and advanced information systems for public safety, resilience,
+          and national innovation.
+        </p>
+      <p>
+        Please check back soon.
+      </p>
+      <div class="footer">
+        © 2025 · Sisiwenyewe Tech Uganda
+      </div>
     </div>
   </div>
+
 </body>
 </html>
