@@ -4,119 +4,400 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sisiwenyewe Tech Uganda</title>
+  <meta
+    name="description"
+    content="Sisiwenyewe builds secure AI systems for CBRN intelligence, public safety, resilience, and mission-critical decision support."
+  />
 
   <style>
-    /* Reset */
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary: #0b5ed7;
+      --primary-dark: #084298;
+      --text-light: rgba(255, 255, 255, 0.92);
+      --text-muted: rgba(255, 255, 255, 0.72);
+      --card-bg: rgba(10, 18, 32, 0.55);
+      --card-border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
     }
 
     body {
-      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      height: 100vh;
-      overflow: hidden;
       color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background: #000;
     }
 
-    /* Background video */
     .video-bg {
       position: fixed;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      z-index: -3;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(2, 10, 24, 0.82),
+          rgba(4, 18, 40, 0.64),
+          rgba(0, 0, 0, 0.62)
+        );
       z-index: -2;
     }
 
-    /* Dark overlay so text is readable */
-    .overlay {
+    .grid-overlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.55);
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
       z-index: -1;
+      opacity: 0.18;
     }
 
-    /* Content card */
-    .card {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 40px;
-      border-radius: 10px;
-      max-width: 520px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      color: #222;
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 28px 24px 32px;
+    }
+
+    .topbar {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .brand span {
+      color: #7db3ff;
+    }
+
+    .nav-note {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .hero {
+      flex: 1;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border: 1px solid rgba(125, 179, 255, 0.35);
+      border-radius: 999px;
+      background: rgba(125, 179, 255, 0.10);
+      color: #cfe2ff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
     }
 
     h1 {
-      color: #0b5ed7;
-      margin-bottom: 10px;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.02;
+      margin-bottom: 18px;
+      letter-spacing: -1.6px;
     }
 
-    p {
-      font-size: 16px;
+    .subtext {
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--text-light);
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: all 0.25s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #3d8bfd);
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(11, 94, 215, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    }
+
+    .btn-secondary {
+      color: #fff;
+      border-color: rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.14);
+      transform: translateY(-1px);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    .panel {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 26px;
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-card h2 {
+      font-size: 22px;
+      margin-bottom: 18px;
+      color: #fff;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .feature-item {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .feature-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 15px;
+      color: #fff;
+    }
+
+    .feature-item span {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .launch-note {
+      margin-top: 12px;
+      color: var(--text-muted);
+      font-size: 13px;
       line-height: 1.6;
-      margin: 10px 0;
     }
 
     .footer {
-      margin-top: 20px;
-      font-size: 14px;
-      color: #666;
+      width: 100%;
+      max-width: 1240px;
+      margin: 28px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      color: var(--text-muted);
+      font-size: 13px;
     }
 
-    /* Center content */
-    .container {
-      display: flex;
-      justify-content: center;
+    .assistant-fab {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 20;
+    }
+
+    .assistant-fab a {
+      display: inline-flex;
       align-items: center;
-      height: 100vh;
-      padding: 20px;
+      gap: 10px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), #3d8bfd);
+      box-shadow: 0 14px 30px rgba(11, 94, 215, 0.35);
+      font-weight: 700;
+    }
+
+    @media (max-width: 960px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        margin-bottom: 24px;
+      }
+
+      .page {
+        padding: 20px 18px 28px;
+      }
+
+      h1 {
+        font-size: clamp(36px, 9vw, 56px);
+      }
+
+      .subtext {
+        font-size: 17px;
+      }
+
+      .panel {
+        padding: 22px;
+      }
     }
   </style>
 </head>
-
 <body>
-
-  <!-- Background Video -->
-  <video
-    class="video-bg"
-    autoplay
-    muted
-    loop
-    playsinline
-  >
-    <source src="assets/video/background.mp4" type="video/mp4">
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="assets/video/background.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  <!-- Dark Overlay -->
   <div class="overlay"></div>
+  <div class="grid-overlay"></div>
 
-  <!-- Page Content -->
-  <div class="container">
-    <div class="card">
-        <h1>Sisiwenyewe</h1>
-        <p><strong>Under Construction</strong></p>
-        <p>
-          Sisiwenyewe is developing secure, intelligent systems that support
-          data-driven decision-making in high-risk and mission-critical environments.
-          Our work focuses on artificial intelligence, sensor-enabled analytics,
-          and advanced information systems for public safety, resilience,
-          and national innovation.
+  <div class="page">
+    <div class="topbar">
+      <div class="brand">Sisiwenyewe<span></span></div>
+      <div class="nav-note">Uganda · Secure AI Systems · Mission-Critical Intelligence</div>
+    </div>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">CBRN Intelligence · Public Safety · National Resilience</div>
+        <h1>Secure AI systems for high-risk and mission-critical environments.</h1>
+        <p class="subtext">
+          Sisiwenyewe develops intelligent platforms that support decision-making in
+          chemical, biological, radiological, and nuclear contexts through advanced
+          analytics, AI-enabled reasoning, and operationally relevant information systems.
         </p>
-      <p>
-        Please check back soon.
-      </p>
-      <div class="footer">
-        © 2025 · Sisiwenyewe Tech Uganda
+
+        <div class="cta-row">
+          <a
+            class="btn btn-primary"
+            href="https://sisiwenyewe-ai.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Launch CBRN AI Model
+          </a>
+
+        
+        </div>
+
+        <div class="pill-row">
+          <div class="pill">CBRN Decision Support</div>
+          <div class="pill">AI-Enabled Intelligence</div>
+          <div class="pill">Sensor-Driven Analytics</div>
+          <div class="pill">Secure Operational Systems</div>
+        </div>
       </div>
+
+      <aside class="panel feature-card" id="capabilities">
+        <h2>Operational Focus</h2>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <strong>CBRN Intelligence Model</strong>
+            <span>Natural-language access to structured intelligence and operational insight.</span>
+          </div>
+
+          <div class="feature-item">
+            <strong>Mission-Critical Analytics</strong>
+            <span>Designed for high-consequence environments where timely interpretation matters.</span>
+          </div>
+
+          <div class="feature-item">
+            <strong>Resilience and Public Safety</strong>
+            <span>Supports preparedness, situational awareness, and informed response.</span>
+          </div>
+        </div>
+
+    
+        <div style="margin-top: 16px; padding: 16px; border-radius: 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); text-align: center;">
+          <strong style="display:block; margin-bottom:6px;">Live System Available</strong>
+          <span style="font-size:13px; color: rgba(255,255,255,0.65);">
+            Access the CBRN AI Model via the primary launch interface.
+          </span>
+        </div>
+        
+
+        <p class="launch-note">
+          The assistant opens in a dedicated experience for a cleaner, faster, and more focused interaction.
+        </p>
+      </aside>
+    </section>
+
+    <div class="footer">
+      <div>© 2026 Sisiwenyewe Tech Uganda</div>
+      <div>Secure AI · Advanced Intelligence Systems · Uganda</div>
     </div>
   </div>
 
+
+  </div>
 </body>
 </html>
