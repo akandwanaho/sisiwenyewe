@@ -68,11 +68,11 @@
     }
 
     .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      padding: 28px 24px 32px;
-    }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 24px 40px;
+}
 
     .topbar {
       width: 100%;
@@ -100,15 +100,15 @@
     }
 
     .hero {
-      flex: 1;
-      width: 100%;
-      max-width: 1240px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 28px;
-      align-items: center;
-    }
+  flex: 1;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 32px;
+  align-items: center;
+}
 
     .hero-copy {
       max-width: 760px;
@@ -203,13 +203,13 @@
     }
 
     .panel {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: 26px;
-      backdrop-filter: blur(18px);
-      box-shadow: var(--shadow);
-    }
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 28px;
+  padding: 28px;
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
 
     .feature-card h2 {
       font-size: 22px;
@@ -284,30 +284,163 @@
     }
 
     @media (max-width: 960px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
+  body {
+    overflow-x: hidden;
+  }
 
-      .topbar {
-        margin-bottom: 24px;
-      }
+  .page {
+    padding: 18px 16px 28px;
+  }
 
-      .page {
-        padding: 20px 18px 28px;
-      }
+  .topbar {
+    margin-bottom: 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 
-      h1 {
-        font-size: clamp(36px, 9vw, 56px);
-      }
+  .brand {
+    font-size: 20px;
+  }
 
-      .subtext {
-        font-size: 17px;
-      }
+  .nav-note {
+    font-size: 12px;
+    line-height: 1.5;
+  }
 
-      .panel {
-        padding: 22px;
-      }
-    }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .eyebrow {
+    margin-bottom: 14px;
+    padding: 7px 12px;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  h1 {
+    font-size: clamp(34px, 10vw, 48px);
+    line-height: 1.04;
+    letter-spacing: -1.2px;
+    margin-bottom: 14px;
+  }
+
+  .subtext {
+    font-size: 15.5px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+
+  .cta-row {
+    margin-bottom: 22px;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 54px;
+    padding: 0 18px;
+    border-radius: 16px;
+    font-size: 15px;
+  }
+
+  .pill-row {
+    gap: 8px;
+  }
+
+  .pill {
+    font-size: 12px;
+    padding: 9px 12px;
+  }
+
+  .panel {
+    border-radius: 24px;
+    padding: 20px;
+  }
+
+  .feature-card h2 {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  .feature-list {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .feature-item {
+    padding: 12px 14px;
+    border-radius: 14px;
+  }
+
+  .feature-item strong {
+    font-size: 14px;
+  }
+
+  .feature-item span {
+    font-size: 13px;
+  }
+
+  .launch-note {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .footer {
+    margin-top: 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .video-bg {
+    object-position: center center;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(2, 10, 24, 0.82),
+        rgba(4, 18, 40, 0.72),
+        rgba(0, 0, 0, 0.70)
+      );
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding: 16px 14px 24px;
+  }
+
+  h1 {
+    font-size: clamp(30px, 11vw, 40px);
+  }
+
+  .subtext {
+    font-size: 15px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .pill {
+    width: fit-content;
+    max-width: 100%;
+  }
+}
+  
+
+
+
   </style>
 </head>
 <body>
@@ -328,11 +461,11 @@
     <section class="hero">
       <div class="hero-copy">
         <div class="eyebrow">CBRN Intelligence · Public Safety · National Resilience</div>
-        <h1>Secure AI systems for high-risk and mission-critical environments.</h1>
+        <h1>Secure AI for mission-critical and high-risk environments.</h1>
         <p class="subtext">
-          Sisiwenyewe develops intelligent platforms that support decision-making in
-          chemical, biological, radiological, and nuclear contexts through advanced
-          analytics, AI-enabled reasoning, and operationally relevant information systems.
+          Sisiwenyewe develops intelligent platforms for chemical, biological, radiological,
+          and nuclear contexts through advanced analytics, AI-enabled reasoning, and secure
+          operational systems built for decision advantage.
         </p>
 
         <div class="cta-row">
