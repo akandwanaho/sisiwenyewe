@@ -250,6 +250,77 @@
       line-height: 1.6;
     }
 
+    .platforms {
+      width: 100%;
+      max-width: 1240px;
+      margin: 48px auto 0;
+    }
+
+    .platforms-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .platforms-heading h2 {
+      font-size: 28px;
+      letter-spacing: -0.6px;
+    }
+
+    .platforms-heading span {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .platforms-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .platform-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 24px;
+      border-radius: 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(18px);
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.25s ease;
+    }
+
+    .platform-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(125, 179, 255, 0.4);
+      background: rgba(10, 18, 32, 0.7);
+    }
+
+    .platform-card h3 {
+      font-size: 20px;
+    }
+
+    .platform-card p {
+      flex: 1;
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .platform-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #7db3ff;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
     .footer {
       width: 100%;
       max-width: 1240px;
@@ -312,6 +383,10 @@
     grid-template-columns: 1fr;
     gap: 18px;
     align-items: stretch;
+  }
+
+  .platforms-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .hero-copy {
@@ -390,6 +465,23 @@
   .launch-note {
     margin-top: 10px;
     font-size: 12px;
+  }
+
+  .platforms {
+    margin-top: 32px;
+  }
+
+  .platforms-heading h2 {
+    font-size: 24px;
+  }
+
+  .platforms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-card {
+    padding: 20px;
+    border-radius: 16px;
   }
 
   .footer {
@@ -522,6 +614,58 @@
           The assistant opens in a dedicated experience for a cleaner, faster, and more focused interaction.
         </p>
       </aside>
+    </section>
+
+    <section class="platforms" id="platforms">
+      <div class="platforms-heading">
+        <h2>Our Platforms</h2>
+        <span>Live systems built by Sisiwenyewe</span>
+      </div>
+
+      <div class="platforms-grid">
+        <a
+          class="platform-card"
+          href="https://nooha.sisiwenyewe.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h3>Nooha</h3>
+          <p>
+            A private facility-management application used by authorized staff to
+            record and manage visitor entries, fuel logs, and press management at
+            specific sites.
+          </p>
+          <span class="platform-link">Visit Nooha →</span>
+        </a>
+
+        <a
+          class="platform-card"
+          href="https://gambanogu.sisiwenyewe.com/login"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h3>Gamba Nogu</h3>
+          <p>
+            A form builder for collecting information from soldiers and civilians.
+            Create a form, publish it, and view or export the answers anytime.
+          </p>
+          <span class="platform-link">Visit Gamba Nogu →</span>
+        </a>
+
+        <a
+          class="platform-card"
+          href="https://sentry.sisiwenyewe.com/vvip-dashboard"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h3>Sentry — CBRNE Intelligence System</h3>
+          <p>
+            A real-time monitoring system for radiation and air quality sensors.
+            Watch live readings on a map and get alerts the moment something looks off.
+          </p>
+          <span class="platform-link">Visit Sentry →</span>
+        </a>
+      </div>
     </section>
 
     <div class="footer">
