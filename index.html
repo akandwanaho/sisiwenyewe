@@ -4,170 +4,274 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sisiwenyewe Tech Uganda — Sovereign AI for National Security</title>
-<meta name="description" content="Sisiwenyewe Tech Uganda builds secure, sovereign AI systems for defence, intelligence and public safety, including Uganda's CBRN Intelligence Model.">
+<meta name="description" content="Sisiwenyewe Tech Uganda builds secure, sovereign AI systems for defence, intelligence and public safety, including Uganda's CBRN Intelligence Model and the Sentry protection intelligence platform.">
 <meta property="og:title" content="Sisiwenyewe Tech Uganda — Sovereign AI for National Security">
 <meta property="og:description" content="Secure AI systems for defence, intelligence and public safety. Designed, trained and operated in Uganda.">
 <meta property="og:url" content="https://sisiwenyewe.com/">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#0A0E13">
+<meta name="theme-color" content="#07090D">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect width='30' height='10' fill='%23111'/%3E%3Crect y='10' width='30' height='10' fill='%23F5C518'/%3E%3Crect y='20' width='30' height='10' fill='%23D52B1E'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0A0E13;--bg2:#0D1218;--panel:#0F151C;--panel2:#121A23;
-  --line:#1E2731;--line2:#263240;--line3:#3A4654;
-  --text:#E7ECF2;--soft:#C2CCD6;--muted:#A9B5C1;--dim:#8E9BA8;
-  --gold:#F5C518;--gold2:#FFD94A;--red:#D52B1E;--green:#7FE0A8;
+  --bg:#07090D;--bg2:#0B0F14;--panel:#0E141B;--panel2:#121A23;
+  --line:#1C2530;--line2:#263240;--line3:#3A4654;
+  --text:#E9EDF2;--soft:#C2CCD6;--muted:#A3AFBB;--dim:#8794A1;
+  --gold:#F5C518;--gold2:#FFD94A;--red:#D52B1E;--green:#6FE0A0;
+  --chem:#FF7A6B;--bio:#5ED39A;--nuc:#B79CFF;--exp:#FFA552;
   --wrap:1280px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+html{scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:var(--gold);text-decoration:none}
 a:hover{color:var(--gold2)}
-img,video{display:block;max-width:100%}
 h1,h2,h3,p{margin:0}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
-.disp{font-family:'Archivo',sans-serif;font-stretch:118%;font-weight:800;letter-spacing:-.01em}
+.disp{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:800;letter-spacing:-.025em}
 .mono{font-family:'IBM Plex Mono',monospace}
-.kicker{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin-bottom:20px}
-.gridbg{background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:56px 56px}
-section{border-bottom:1px solid var(--line)}
-.sec{padding:120px 0}
-.h2{font-size:clamp(34px,4.6vw,64px);line-height:1.02}
-.lead{color:#B4C0CC;font-size:18px}
-.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:6px;font-weight:600;font-size:16px;transition:background .2s,border-color .2s,color .2s}
-.btn-gold{background:var(--gold);color:var(--bg)}
-.btn-gold:hover{background:var(--gold2);color:var(--bg)}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:28px;height:1px;background:var(--gold)}
+.gridbg{background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px}
+.sec{padding:140px 0;position:relative}
+.h2{font-size:clamp(36px,5.2vw,76px);line-height:1}
+.lead{color:#B4C0CC;font-size:19px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:6px;font-weight:600;font-size:16px;transition:background .25s,border-color .25s,color .25s,transform .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#07090D}
+.btn-gold:hover{background:var(--gold2);color:#07090D}
 .btn-ghost{border:1px solid var(--line3);color:var(--text);font-weight:500}
 .btn-ghost:hover{border-color:var(--gold);color:var(--text)}
 .ico{width:18px;height:18px;flex:none}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--bg);padding:10px 16px;border-radius:6px;z-index:50}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:#07090D;padding:10px 16px;border-radius:6px;z-index:100}
 .skip:focus{left:8px}
 
-/* nav */
-header{position:sticky;top:0;z-index:20;background:rgba(10,14,19,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+/* ---------- intro ---------- */
+#intro{position:fixed;inset:0;z-index:90;background:#07090D;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .7s ease,visibility .7s}
+#intro.done{opacity:0;visibility:hidden}
+#intro .word{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:900;font-size:clamp(28px,6vw,64px);letter-spacing:.14em;overflow:hidden}
+#intro .word span{display:inline-block;transform:translateY(110%);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+#intro .scan{width:min(420px,70vw);height:2px;background:var(--line2);position:relative;overflow:hidden}
+#intro .scan::after{content:"";position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;animation:load 1.1s .2s ease-out forwards}
+#intro .mono{font-size:12px;letter-spacing:.3em;color:var(--dim)}
+@keyframes rise{to{transform:none}}
+@keyframes load{to{transform:scaleX(1)}}
+
+/* ---------- progress + nav ---------- */
+#progress{position:fixed;top:0;left:0;right:0;height:2px;background:var(--gold);transform-origin:left;transform:scaleX(0);z-index:60}
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s,transform .4s;border-bottom:1px solid transparent}
+header.solid{background:rgba(7,9,13,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-color:var(--line)}
+header.hide{transform:translateY(-100%)}
 .nav{display:flex;align-items:center;gap:32px;min-height:72px}
 .brand{display:flex;align-items:center;gap:12px;color:var(--text);margin-right:auto}
 .brand:hover{color:var(--text)}
 .flag{display:flex;flex-direction:column;width:28px;height:28px;border-radius:4px;overflow:hidden}
 .flag span{flex:1}
-.brand b{display:block;font-family:'Archivo',sans-serif;font-stretch:118%;font-weight:800;font-size:19px;letter-spacing:.06em;line-height:1.1}
+.brand b{display:block;font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:800;font-size:19px;letter-spacing:.06em;line-height:1.1}
 .brand small{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9AA7B4;letter-spacing:.14em;line-height:1.3}
 .links{display:flex;gap:28px;font-size:15px}
-.links a{color:var(--soft)}
-.links a:hover{color:var(--gold)}
+.links a{color:var(--soft);position:relative}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.links a:hover{color:var(--text)}
+.links a:hover::after{transform:scaleX(1)}
 .nav .btn{min-height:44px;padding:10px 20px;font-size:15px}
 .menu-btn{display:none;background:none;border:1px solid var(--line3);color:var(--text);border-radius:6px;width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer}
 
-/* hero */
-.hero{position:relative;overflow:hidden}
-#mesh{position:absolute;inset:0;width:100%;height:100%;display:block}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,19,.9) 18%,rgba(10,14,19,.25) 62%,rgba(10,14,19,.45));pointer-events:none}
-.hero .wrap{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:64px;align-items:center;padding-top:112px;padding-bottom:104px}
-.hero-copy{flex:999 1 560px;min-width:0}
-.hero h1{font-size:clamp(42px,6.4vw,88px);line-height:.98}
-.hero h1 em{font-style:normal;color:var(--gold)}
-.hero .sub{margin-top:32px;max-width:600px;font-size:20px;color:#B4C0CC}
-.ctas{display:flex;flex-wrap:wrap;gap:16px;margin-top:44px}
+/* ---------- reveal system ---------- */
+.anim [data-reveal]{opacity:0;transform:translateY(40px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i,0)*90ms)}
+.anim [data-reveal].in{opacity:1;transform:none}
+.anim [data-reveal="left"]{transform:translateX(-50px)}
+.anim [data-reveal="scale"]{transform:scale(.94)}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.w > span{display:inline-block}
+.anim [data-split] .w > span{transform:translateY(105%);transition:transform 1s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*55ms)}
+.anim [data-split].in .w > span{transform:none}
 
-.console{flex:1 1 400px;min-width:0;background:rgba(15,21,28,.92);border:1px solid var(--line2);border-radius:10px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+#mesh{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,9,13,.92) 16%,rgba(7,9,13,.2) 62%,rgba(7,9,13,.5)),linear-gradient(0deg,var(--bg) 0,transparent 30%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:64px;align-items:center;padding-top:140px;padding-bottom:110px;width:100%}
+.hero-copy{flex:999 1 560px;min-width:0;will-change:transform,opacity}
+.hero h1{font-size:clamp(44px,7vw,104px);line-height:.95}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .sub{margin-top:34px;max-width:600px;font-size:20px;color:#B4C0CC}
+.ctas{display:flex;flex-wrap:wrap;gap:16px;margin-top:44px}
+.scroll-cue{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.3em;color:var(--dim)}
+.scroll-cue i{width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:cue 2s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+.console-wrap{flex:1 1 400px;min-width:0;will-change:transform}
+.console{background:rgba(14,20,27,.9);border:1px solid var(--line2);border-radius:12px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.55);will-change:transform}
 .console-top{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line2);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;color:#9AA7B4}
-.dot{width:8px;height:8px;border-radius:50%;background:#3FB97A;box-shadow:0 0 0 0 rgba(63,185,122,.6);animation:pulse 2.4s infinite}
+.dot{width:8px;height:8px;border-radius:50%;background:#3FB97A;animation:pulse 2.4s infinite;flex:none}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(63,185,122,.55)}70%{box-shadow:0 0 0 8px rgba(63,185,122,0)}100%{box-shadow:0 0 0 0 rgba(63,185,122,0)}}
 .console-body{padding:22px;display:flex;flex-direction:column;gap:16px;font-size:15px}
 .q{align-self:flex-end;background:#1B2531;border-radius:8px;padding:12px 16px;max-width:88%}
-.a{display:flex;flex-direction:column;gap:10px;background:var(--panel2);border:1px solid var(--line2);border-radius:8px;padding:16px}
+.a{display:flex;flex-direction:column;gap:8px;background:var(--panel2);border:1px solid var(--line2);border-radius:8px;padding:16px;min-height:150px}
 .a .label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--gold)}
-.bar{height:9px;border-radius:3px;background:#2A3644;transform-origin:left;animation:grow 1.4s ease-out both}
-.bar:nth-of-type(3){animation-delay:.25s}.bar:nth-of-type(4){animation-delay:.5s}
-@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.typed{font-size:14px;color:var(--soft);white-space:pre-line;min-height:84px}
+.typed::after{content:"▍";color:var(--gold);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:4px 10px;border:1px solid var(--line3);border-radius:99px;color:var(--soft)}
 .ask{display:flex;align-items:center;gap:12px;border:1px solid var(--line2);border-radius:8px;padding:10px 12px;color:#8794A1;font-size:14px}
 .ask > span:first-child{flex:1}
 .mic{width:36px;height:36px;border-radius:6px;background:#1B2531;display:flex;align-items:center;justify-content:center;color:var(--soft)}
 
-/* trust */
-.trust{background:var(--bg2)}
-.trust .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 40px;padding-top:28px;padding-bottom:28px}
-.trust p{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.16em;color:var(--soft)}
-.trust div{display:flex;flex-wrap:wrap;gap:12px 32px;font-size:14px;color:#9AA7B4}
-.trust div span::before{content:"";display:inline-block;width:6px;height:6px;background:var(--gold);margin-right:10px;vertical-align:middle;border-radius:1px}
+/* ---------- marquee ---------- */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);overflow:hidden;padding:22px 0}
+.mq-track{display:flex;width:max-content;animation:mq 38s linear infinite}
+.mq-track span{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:800;font-size:clamp(22px,2.6vw,34px);letter-spacing:.04em;padding:0 28px;white-space:nowrap;color:transparent;-webkit-text-stroke:1px #4A5766}
+.mq-track span:nth-child(3n+1){color:var(--text);-webkit-text-stroke:0}
+.mq-track b{color:var(--gold);font-size:24px;align-self:center}
+@keyframes mq{to{transform:translateX(-50%)}}
 
-/* headers */
-.sec-head{display:flex;flex-wrap:wrap;gap:24px 64px;align-items:flex-end;margin-bottom:64px}
+/* ---------- CBRNE pinned ---------- */
+.pin{position:relative}
+.pin-stage{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center}
+#cbrne{height:420vh}
+.cbrne-inner{width:100%}
+.letters{display:flex;justify-content:space-between;gap:8px;margin:36px 0 40px}
+.letters span{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:900;font-size:clamp(70px,15vw,230px);line-height:.85;color:transparent;-webkit-text-stroke:1.5px #2E3A47;transition:color .5s,-webkit-text-stroke-color .5s,transform .6s cubic-bezier(.2,.8,.2,1);display:inline-block}
+.letters span.on{color:var(--c);-webkit-text-stroke-color:var(--c);transform:translateY(-10px)}
+.letters span.past{color:transparent;-webkit-text-stroke-color:var(--c)}
+.domain{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;min-height:130px}
+.domain-name{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:800;font-size:clamp(30px,4vw,56px);line-height:1}
+.domain-text{max-width:520px;color:#B4C0CC;font-size:18px}
+.domain-swap{transition:opacity .35s,transform .35s}
+.domain-swap.out{opacity:0;transform:translateY(12px)}
+.cbrne-bar{height:2px;background:var(--line2);margin-top:44px;position:relative}
+.cbrne-bar i{position:absolute;inset:0;background:var(--gold);transform-origin:left;transform:scaleX(0)}
+
+/* ---------- CBRN model ---------- */
+.sec-head{display:flex;flex-wrap:wrap;gap:24px 64px;align-items:flex-end;margin-bottom:72px}
 .sec-head > div{flex:999 1 560px;min-width:0}
 .sec-head > p{flex:1 1 360px}
-
-/* pipeline */
-.pipe{display:flex;flex-wrap:wrap;align-items:stretch;gap:12px;margin-bottom:72px}
-.step{flex:1 1 200px;border:1px solid var(--line2);border-radius:8px;padding:22px;background:var(--panel)}
-.step.core{border-color:var(--gold);background:#15130A}
-.step .n{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gold);letter-spacing:.12em;margin-bottom:8px}
-.step p:last-child{font-weight:600}
-.arrow{display:flex;align-items:center;color:#5B6876}
-
-/* features */
-.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.feat{background:var(--bg);padding:32px;transition:background .2s}
-.feat:hover{background:#0E141B}
+.pipe{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-bottom:80px}
+.pipe-line{position:absolute;left:0;right:0;top:50%;height:2px;background:var(--line2);z-index:0}
+.pipe-line i{position:absolute;inset:0;background:var(--gold);transform-origin:left;transform:scaleX(var(--p,0))}
+.step{position:relative;z-index:1;border:1px solid var(--line2);border-radius:10px;padding:24px;background:var(--panel);transition:border-color .5s,background .5s,box-shadow .5s}
+.step.lit{border-color:var(--gold);background:#16140A;box-shadow:0 0 0 1px rgba(245,197,24,.15),0 20px 50px rgba(245,197,24,.06)}
+.step .n{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gold);letter-spacing:.12em;margin-bottom:10px}
+.step p:last-child{font-weight:600;font-size:18px}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.feat{background:var(--bg);padding:34px;transition:background .3s}
+.feat:hover{background:#0D131A}
 .feat svg{width:28px;height:28px}
 .feat h3{margin:18px 0 8px;font-size:20px;font-weight:600}
 .feat p{color:var(--muted);font-size:16px}
-.feat.cta{display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.feat.cta{display:flex;flex-direction:column;justify-content:space-between;gap:20px;background:#100F08}
 .feat.cta h3{margin-top:0}
 .feat.cta a{font-weight:600;display:inline-flex;align-items:center;gap:8px;min-height:44px}
 
-/* capabilities */
-.caps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
-.cap{border-top:2px solid var(--line3);padding-top:24px;transition:border-color .3s}
-.cap:hover,.cap:first-child{border-color:var(--gold)}
-.cap .n{font-family:'IBM Plex Mono',monospace;font-size:13px;color:#9AA7B4;margin-bottom:12px}
-.cap h3{margin-bottom:10px;font-size:22px;font-weight:600}
-.cap p{color:var(--muted);font-size:16px}
+/* ---------- Sentry ---------- */
+#sentry{background:radial-gradient(1200px 600px at 50% 0,rgba(245,197,24,.07),transparent 70%),var(--bg);overflow:hidden}
+.sentry-head{text-align:center;max-width:980px;margin:0 auto 70px}
+.sentry-head .kicker{justify-content:center}
+.sentry-head .kicker::after{content:"";width:28px;height:1px;background:var(--gold)}
+.sentry-head .lead{margin:26px auto 0;max-width:720px}
+.dash-wrap{perspective:1600px}
+.dash{transform-origin:50% 0;will-change:transform;border:1px solid var(--line2);border-radius:16px;background:linear-gradient(180deg,#0D131A,#0A0F15);box-shadow:0 60px 140px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.02) inset;overflow:hidden}
+.dash-top{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;padding:16px 22px;border-bottom:1px solid var(--line2);background:#0B1016}
+.dash-title{display:flex;align-items:center;gap:12px;margin-right:auto}
+.dash-title b{font-family:'IBM Plex Mono',monospace;font-size:14px;letter-spacing:.14em}
+.dash-title small{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);letter-spacing:.12em}
+.pill{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;padding:6px 12px;border-radius:99px;display:inline-flex;align-items:center;gap:8px}
+.pill.live{background:#122A1E;color:var(--green)}
+.pill.risk{background:#1B2219;color:var(--green);border:1px solid #284031}
+.pill.sim{background:#1C1A0E;color:var(--gold)}
+.dash-body{padding:22px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.panel{background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:18px;min-width:0}
+.panel h4{margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--dim);font-weight:500;display:flex;justify-content:space-between;gap:8px}
+.kpis{grid-column:span 12;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.kpi{background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:18px;position:relative;overflow:hidden}
+.kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c)}
+.kpi .v{font-family:'IBM Plex Mono',monospace;font-size:clamp(22px,2.4vw,32px);color:var(--c);line-height:1.1}
+.kpi .l{font-size:13px;color:var(--muted);margin-top:6px}
+.kpi .s{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--dim);letter-spacing:.1em;margin-top:4px}
+.p-gauge{grid-column:span 4}
+.p-chart{grid-column:span 8}
+.p-route{grid-column:span 5}
+.p-feed{grid-column:span 4}
+.p-ai{grid-column:span 3}
+.gauge{display:flex;flex-direction:column;align-items:center}
+.gauge svg{width:100%;max-width:280px;height:auto}
+.gauge .lvl{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:800;font-size:34px;margin-top:-18px;color:var(--green)}
+.gauge .cap{font-size:12px;color:var(--dim);font-family:'IBM Plex Mono',monospace;letter-spacing:.1em}
+#chart{width:100%;height:220px;display:block}
+.route svg{width:100%;height:auto;display:block}
+.feed{display:flex;flex-direction:column;gap:10px;min-height:236px}
+.fi{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;font-size:13px;padding:10px 12px;border:1px solid var(--line2);border-radius:8px;background:#0B1117;animation:fin .6s cubic-bezier(.2,.8,.2,1)}
+.fi i{width:8px;height:8px;border-radius:50%;background:var(--green)}
+.fi span:nth-child(3){font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim)}
+@keyframes fin{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.ai-q{font-size:13px;background:#1B2531;border-radius:8px;padding:10px 12px;margin-bottom:10px}
+.ai-a{font-size:13px;color:var(--soft);white-space:pre-line;min-height:150px}
+.ai-a::after{content:"▍";color:var(--gold);animation:blink 1s steps(1) infinite}
+.dash-note{text-align:center;font-size:13px;color:var(--dim);margin-top:22px;font-family:'IBM Plex Mono',monospace;letter-spacing:.06em}
+.sentry-feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;margin-top:80px}
+.sf{border-top:1px solid var(--line3);padding-top:22px}
+.sf h3{font-size:19px;font-weight:600;margin-bottom:8px}
+.sf p{font-size:15px;color:var(--muted)}
+.sentry-cta{display:flex;justify-content:center;margin-top:56px}
 
-/* portfolio */
-.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;margin-bottom:20px}
-.card{border:1px solid var(--line2);border-radius:10px;padding:36px;background:var(--panel);display:flex;flex-direction:column;gap:14px;transition:transform .2s,border-color .2s}
-.card:hover{transform:translateY(-2px);border-color:var(--line3)}
-.card.flag-card{border-color:var(--gold);background:#121109}
+/* ---------- horizontal capabilities ---------- */
+#caps{height:340vh}
+.caps-stage{flex-direction:column;justify-content:center;align-items:stretch}
+.caps-head{padding-bottom:48px}
+.caps-track{display:flex;gap:28px;padding:0 max(32px,calc((100vw - 1280px)/2 + 32px));will-change:transform}
+.capcard{flex:none;width:min(520px,78vw);min-height:380px;border:1px solid var(--line2);border-radius:16px;padding:40px;background:linear-gradient(160deg,#111821,#0B1016);display:flex;flex-direction:column;justify-content:space-between;gap:30px;position:relative;overflow:hidden}
+.capcard .num{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:900;font-size:120px;line-height:.8;color:transparent;-webkit-text-stroke:1px #33404E}
+.capcard h3{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:800;font-size:32px;line-height:1.05;margin-bottom:12px}
+.capcard p{color:var(--muted)}
+.capcard::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border:1px solid rgba(245,197,24,.18);border-radius:50%;box-shadow:0 0 0 40px rgba(245,197,24,.03),0 0 0 80px rgba(245,197,24,.02)}
+
+/* ---------- portfolio ---------- */
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:20px;margin-bottom:20px}
+.card{border:1px solid var(--line2);border-radius:14px;padding:36px;background:var(--panel);display:flex;flex-direction:column;gap:14px;transition:border-color .3s,transform .25s ease-out;transform-style:preserve-3d;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,50%),rgba(245,197,24,.08),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover::before{opacity:1}
+.card:hover{border-color:var(--line3)}
+.card.flag-card{border-color:var(--gold);background:#11100A}
 .card-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .tag{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;color:#9AA7B4}
 .card.flag-card .tag{color:var(--gold)}
-.live{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:4px 10px;border-radius:99px;background:#183A28;color:var(--green)}
-.card h3{font-size:30px}
+.live{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:4px 10px;border-radius:99px;background:#122A1E;color:var(--green)}
+.restricted{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:4px 10px;border-radius:99px;background:#2A1414;color:#FF9B8F}
+.card h3{font-size:32px}
 .card p{color:#B4C0CC;font-size:16px}
 .card a{font-weight:600;margin-top:auto;min-height:44px;display:inline-flex;align-items:center}
 .small{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.soon{border:1px dashed #334050;border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.soon{border:1px dashed #334050;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:10px}
 .soon .tag{font-size:11px}
 .soon h3{font-size:22px;font-weight:600}
 .soon p{color:var(--dim);font-size:15px}
 
-/* about */
+/* ---------- about ---------- */
 .about{background:var(--bg2)}
-.about .wrap{display:flex;flex-wrap:wrap;gap:56px 80px}
-.about-l{flex:1 1 420px;min-width:0}
-.about-l h2{font-size:clamp(40px,5.6vw,80px);line-height:.98}
-.about-l h2 span{color:var(--gold)}
-.about-r{flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:24px;font-size:19px;color:var(--soft)}
-.vals{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:16px}
-.val{border:1px solid var(--line2);border-radius:8px;padding:20px}
+.statement{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:700;font-size:clamp(30px,4.2vw,62px);line-height:1.12;max-width:1150px}
+.statement .sw{opacity:.14;transition:opacity .25s}
+.statement .sw.on{opacity:1}
+.statement .sw.gold.on{color:var(--gold)}
+.about-grid{display:flex;flex-wrap:wrap;gap:40px 80px;margin-top:80px}
+.about-grid > p{flex:1 1 420px;color:var(--soft);font-size:19px}
+.vals{flex:1 1 420px;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px}
+.val{border:1px solid var(--line2);border-radius:10px;padding:20px}
 .val b{display:block;color:var(--text);font-size:17px;font-weight:600;margin-bottom:6px}
 .val span{font-size:15px;color:var(--muted)}
 
-/* contact */
+/* ---------- contact ---------- */
 .contact .wrap{display:flex;flex-wrap:wrap;gap:56px 80px}
 .contact-l{flex:1 1 400px;min-width:0}
 .contact-l h2{margin-bottom:24px}
 .contact-l .lead{margin-bottom:36px}
 .cinfo{display:flex;flex-direction:column;gap:14px;font-size:16px}
 .cinfo span{display:block;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9AA7B4;letter-spacing:.12em}
-form{flex:999 1 520px;min-width:0;background:var(--panel);border:1px solid var(--line2);border-radius:10px;padding:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+form{flex:999 1 520px;min-width:0;background:var(--panel);border:1px solid var(--line2);border-radius:14px;padding:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
 label{display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--soft)}
 input,select,textarea{font:inherit;font-size:16px;background:var(--bg);border:1px solid #334050;border-radius:6px;padding:12px 14px;color:var(--text);min-height:46px;width:100%}
 input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none}
@@ -175,51 +279,73 @@ textarea{resize:vertical}
 .full{grid-column:1/-1}
 form button{justify-self:start;border:0;cursor:pointer;font:inherit}
 .note{grid-column:1/-1;font-size:13px;color:var(--dim)}
-
-footer{background:#080B0F}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;padding-top:40px;padding-bottom:40px;font-size:14px;color:var(--dim)}
+footer{background:#05070A;border-top:1px solid var(--line)}
+.foot-big{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:900;font-size:clamp(48px,12vw,190px);line-height:.85;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px #26313D;text-align:center;padding:70px 0 10px;user-select:none;white-space:nowrap;overflow:hidden}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;padding:30px 0 40px;font-size:14px;color:var(--dim)}
 footer nav{display:flex;flex-wrap:wrap;gap:24px}
 footer nav a{color:var(--muted)}
 
-/* reveal */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  .p-gauge,.p-route,.p-feed,.p-ai{grid-column:span 6}
+  .p-chart{grid-column:span 12}
+  .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
 @media (max-width:900px){
   .links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 32px 20px}
   .links.open{display:flex}
   .links a{padding:12px 0;border-bottom:1px solid var(--line)}
+  .links a::after{display:none}
   .menu-btn{display:inline-flex}
   .nav .btn{display:none}
-  .sec{padding:84px 0}
-  .arrow{display:none}
+  header{background:rgba(7,9,13,.9)}
+  .sec{padding:96px 0}
+  .pipe{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pipe-line{display:none}
+  /* horizontal section becomes vertical */
+  #caps{height:auto}
+  #caps .pin-stage{position:relative;height:auto;padding:96px 0}
+  .caps-track{flex-direction:column;padding:0 32px;transform:none!important}
+  .capcard{width:auto;min-height:0}
 }
-@media (max-width:560px){
+@media (max-width:640px){
   .wrap{padding:0 16px}
   .links{padding:8px 16px 20px}
-  .hero .wrap{padding-top:72px;padding-bottom:72px}
-  .card,form{padding:24px}
-  .big{grid-template-columns:1fr}
+  .caps-track{padding:0 16px}
+  .card,form,.capcard{padding:24px}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .p-gauge,.p-route,.p-feed,.p-ai{grid-column:span 12}
+  .dash-body{padding:14px;gap:12px}
+  .pipe{grid-template-columns:1fr}
+  #cbrne{height:360vh}
+  .capcard .num{font-size:80px}
 }
 @media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .reveal{opacity:1;transform:none;transition:none}
-  .bar,.dot{animation:none}
+  #intro{display:none}
+  .mq-track{animation:none}
+  .anim [data-reveal],.anim [data-split] .w > span{opacity:1!important;transform:none!important;transition:none!important}
+  .dot,.scroll-cue i{animation:none}
 }
 </style>
 </head>
 <body>
+<div id="intro" aria-hidden="true">
+  <div class="word"><span>SISIWENYEWE</span></div>
+  <div class="scan"></div>
+  <div class="mono">SECURE CHANNEL ESTABLISHED</div>
+</div>
+<div id="progress" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
 
-<header>
+<header id="hdr">
   <nav class="wrap nav" aria-label="Main">
     <a href="#top" class="brand" aria-label="Sisiwenyewe Tech Uganda, home">
       <span class="flag" aria-hidden="true"><span style="background:#111"></span><span style="background:#F5C518"></span><span style="background:#D52B1E"></span></span>
       <span><b>SISIWENYEWE</b><small>TECH UGANDA</small></span>
     </a>
     <div class="links" id="links">
-      <a href="#cbrn">CBRN Model</a>
-      <a href="#capabilities">Capabilities</a>
+      <a href="#model">CBRN Model</a>
+      <a href="#sentry">Sentry</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -233,93 +359,110 @@ footer nav a{color:var(--muted)}
 
 <main id="main">
 
+<!-- HERO -->
 <section class="hero gridbg" id="top">
   <canvas id="mesh" aria-hidden="true"></canvas>
   <div class="wrap">
-    <div class="hero-copy">
-      <p class="kicker">Secure AI systems · Defence · National resilience</p>
-      <h1 class="disp">Sovereign intelligence for <em>national security.</em></h1>
-      <p class="sub">Sisiwenyewe builds secure AI systems for defence, intelligence and public safety: designed, trained and operated in Uganda, for decisions where the stakes are highest.</p>
-      <div class="ctas">
+    <div class="hero-copy" id="heroCopy">
+      <p class="kicker" data-reveal>Secure AI systems · Defence · National resilience</p>
+      <h1 class="disp" data-split>Sovereign intelligence for <em>national security.</em></h1>
+      <p class="sub" data-reveal style="--i:4">Sisiwenyewe builds secure AI systems for defence, intelligence and public safety: designed, trained and operated in Uganda, for decisions where the stakes are highest.</p>
+      <div class="ctas" data-reveal style="--i:6">
         <a class="btn btn-gold" href="https://sisiwenyewe-ai.netlify.app" target="_blank" rel="noopener">Launch the CBRN Intelligence Model
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost" href="#contact">Request a briefing</a>
+        <a class="btn btn-ghost" href="#sentry">See Sentry</a>
       </div>
     </div>
 
-    <div class="console" aria-hidden="true">
+    <div class="console-wrap" id="heroConsole"><div class="console" data-reveal="scale" style="--i:3" aria-hidden="true">
       <div class="console-top"><span class="dot"></span>CBRN INTELLIGENCE MODEL · SECURE SESSION</div>
       <div class="console-body">
-        <div class="q">Summarise biological agents of concern and the indicators a field team should watch for.</div>
+        <div class="q">Summarise biological agents of concern and what a field team should watch for.</div>
         <div class="a">
           <span class="label">THREAT BRIEFING</span>
-          <div class="bar" style="width:92%"></div>
-          <div class="bar" style="width:78%"></div>
-          <div class="bar" style="width:85%"></div>
+          <div class="typed" id="heroTyped"></div>
           <div class="chips"><span class="chip">BIOLOGICAL</span><span class="chip">KNOWLEDGE BASE</span><span class="chip">SENSOR CONTEXT</span></div>
         </div>
         <div class="ask"><span>Ask about a chemical, biological, radiological or nuclear threat…</span>
           <span class="mic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
         </div>
       </div>
-    </div>
+    </div></div>
   </div>
+  <div class="scroll-cue" aria-hidden="true"><span>SCROLL</span><i></i></div>
 </section>
 
-<section class="trust">
-  <div class="wrap">
-    <p>TRUSTED BY NATIONAL DEFENCE AND GOVERNMENT INSTITUTIONS</p>
-    <div><span>Sovereign deployment</span><span>Secure by design</span><span>Built in Uganda</span></div>
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    <span>CBRN INTELLIGENCE</span><b>✦</b><span>VVIP PROTECTION</span><b>✦</b><span>SENSOR FUSION</span><b>✦</b><span>THREAT BRIEFINGS</span><b>✦</b><span>SOVEREIGN AI</span><b>✦</b><span>BUILT IN UGANDA</span><b>✦</b>
+    <span>CBRN INTELLIGENCE</span><b>✦</b><span>VVIP PROTECTION</span><b>✦</b><span>SENSOR FUSION</span><b>✦</b><span>THREAT BRIEFINGS</span><b>✦</b><span>SOVEREIGN AI</span><b>✦</b><span>BUILT IN UGANDA</span><b>✦</b>
   </div>
-</section>
+</div>
 
-<section id="cbrn" class="sec">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div>
-        <p class="kicker">Flagship system</p>
-        <h2 class="disp h2">The CBRN Intelligence Model</h2>
+<!-- CBRNE PINNED -->
+<section id="cbrne" class="pin" aria-label="Threat domains">
+  <div class="pin-stage gridbg">
+    <div class="wrap cbrne-inner">
+      <p class="kicker">Five threat domains. One intelligence picture.</p>
+      <div class="letters" aria-hidden="true">
+        <span style="--c:var(--chem)">C</span><span style="--c:var(--bio)">B</span><span style="--c:var(--gold)">R</span><span style="--c:var(--nuc)">N</span><span style="--c:var(--exp)">E</span>
       </div>
-      <p class="lead">Uganda's sovereign AI model for chemical, biological, radiological and nuclear threats. Commanders and analysts ask questions in plain language and get structured answers and briefings in seconds.</p>
+      <div class="domain domain-swap" id="domain">
+        <h2 class="domain-name" id="domainName">Chemical</h2>
+        <p class="domain-text" id="domainText">Toxic industrial chemicals and warfare agents, identified from sensor signatures and field symptoms.</p>
+      </div>
+      <div class="cbrne-bar"><i id="cbrneBar"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- CBRN MODEL -->
+<section id="model" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="kicker" data-reveal>Flagship system</p>
+        <h2 class="disp h2" data-split>The CBRN Intelligence Model</h2>
+      </div>
+      <p class="lead" data-reveal style="--i:2">Uganda's sovereign AI model for chemical, biological, radiological and nuclear threats. Commanders and analysts ask questions in plain language and get structured answers and briefings in seconds.</p>
     </div>
 
-    <div class="pipe reveal" aria-label="How the model works">
-      <div class="step"><p class="n">01 · INPUT</p><p>Sensor feeds and field reports</p></div>
-      <div class="arrow" aria-hidden="true"><svg class="ico" style="width:24px;height:24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-      <div class="step core"><p class="n">02 · MODEL</p><p>CBRN knowledge base and reasoning</p></div>
-      <div class="arrow" aria-hidden="true"><svg class="ico" style="width:24px;height:24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-      <div class="step"><p class="n">03 · ANALYSIS</p><p>Threat assessment and indicators</p></div>
-      <div class="arrow" aria-hidden="true"><svg class="ico" style="width:24px;height:24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-      <div class="step"><p class="n">04 · DECISION</p><p>Briefings for command</p></div>
+    <div class="pipe" id="pipe" aria-label="How the model works">
+      <div class="pipe-line"><i></i></div>
+      <div class="step" data-reveal style="--i:0"><p class="n">01 · INPUT</p><p>Sensor feeds and field reports</p></div>
+      <div class="step" data-reveal style="--i:1"><p class="n">02 · MODEL</p><p>CBRN knowledge base and reasoning</p></div>
+      <div class="step" data-reveal style="--i:2"><p class="n">03 · ANALYSIS</p><p>Threat assessment and indicators</p></div>
+      <div class="step" data-reveal style="--i:3"><p class="n">04 · DECISION</p><p>Briefings for command</p></div>
     </div>
 
-    <div class="feats reveal">
-      <div class="feat">
+    <div class="feats">
+      <div class="feat" data-reveal style="--i:0">
         <svg viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
         <h3>Plain-language access</h3>
         <p>Query structured CBRN knowledge the way you would ask a specialist, by text or by voice.</p>
       </div>
-      <div class="feat">
+      <div class="feat" data-reveal style="--i:1">
         <svg viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
         <h3>Live sensor analysis</h3>
         <p>Interpret incoming sensor data in context, so readings become assessments rather than raw numbers.</p>
       </div>
-      <div class="feat">
+      <div class="feat" data-reveal style="--i:2">
         <svg viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
         <h3>Threat briefings</h3>
         <p>Generate structured briefings ready for commanders and decision-makers.</p>
       </div>
-      <div class="feat">
+      <div class="feat" data-reveal style="--i:0">
         <svg viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
         <h3>Intelligence analysis</h3>
         <p>Cross-reference agents, indicators and scenarios to support analysts under time pressure.</p>
       </div>
-      <div class="feat">
+      <div class="feat" data-reveal style="--i:1">
         <svg viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
         <h3>Sovereign by design</h3>
         <p>Built and hosted on national infrastructure, so sensitive queries and data stay under Ugandan control.</p>
       </div>
-      <div class="feat cta">
+      <div class="feat cta" data-reveal style="--i:2">
         <div><h3>See it in operation</h3><p>The model is live for authorised users.</p></div>
         <a href="https://sisiwenyewe-ai.netlify.app" target="_blank" rel="noopener">Launch the model
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -328,101 +471,196 @@ footer nav a{color:var(--muted)}
   </div>
 </section>
 
-<section id="capabilities" class="sec gridbg">
+<!-- SENTRY -->
+<section id="sentry" class="sec">
   <div class="wrap">
-    <div class="reveal" style="margin-bottom:64px">
-      <p class="kicker">Operational focus</p>
-      <h2 class="disp h2" style="max-width:900px">Built for high-consequence environments.</h2>
+    <div class="sentry-head">
+      <p class="kicker" data-reveal>Sentry · Protection intelligence</p>
+      <h2 class="disp h2" data-split>Every threat, sensed before it arrives.</h2>
+      <p class="lead" data-reveal style="--i:3">Sentry fuses personal sensors, route security and surveillance into one live CBRNE picture for the protection of very important persons, with an AI analyst that turns readings into briefings.</p>
     </div>
-    <div class="caps reveal">
-      <div class="cap"><p class="n">01</p><h3>CBRN intelligence</h3><p>Detection support, threat knowledge and decision aids for chemical, biological, radiological and nuclear scenarios.</p></div>
-      <div class="cap"><p class="n">02</p><h3>Mission-critical analytics</h3><p>Analytics designed for situations where speed and accuracy cannot be traded against each other.</p></div>
-      <div class="cap"><p class="n">03</p><h3>Resilience and public safety</h3><p>Systems that help national institutions prepare for, respond to and recover from emergencies.</p></div>
-      <div class="cap"><p class="n">04</p><h3>Secure sovereign platforms</h3><p>AI infrastructure deployed in-country, with access controls suited to defence and government use.</p></div>
+
+    <div class="dash-wrap">
+      <div class="dash" id="dash" role="img" aria-label="Illustration of the Sentry dashboard showing CBRNE readings, a threat gauge, a live radiation chart, a protected route and an alert feed, with simulated data">
+        <div class="dash-top">
+          <div class="dash-title"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FE0A0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg><span><b>VVIP SECURITY DASHBOARD</b><br><small>CBRNE THREAT MONITORING &amp; PROTECTION ANALYTICS</small></span></div>
+          <span class="pill sim">DEMONSTRATION · SIMULATED DATA</span>
+          <span class="pill live"><span class="dot"></span>LIVE</span>
+          <span class="pill risk">RISK LEVEL: LOW</span>
+        </div>
+        <div class="dash-body">
+          <div class="kpis">
+            <div class="kpi" style="--c:var(--gold)"><div class="v"><span id="dose">0.110</span> <small style="font-size:.5em">μSv/h</small></div><div class="l">Radiation dose rate</div><div class="s"><span id="cps">45</span> CPS · PERSONAL SENSOR</div></div>
+            <div class="kpi" style="--c:var(--chem)"><div class="v">0</div><div class="l">Chemical threats</div><div class="s">ALL CLEAR</div></div>
+            <div class="kpi" style="--c:var(--bio)"><div class="v">0</div><div class="l">Biological threats</div><div class="s">ALL CLEAR</div></div>
+            <div class="kpi" style="--c:var(--nuc)"><div class="v">0</div><div class="l">Nuclear threats</div><div class="s">ALL CLEAR</div></div>
+            <div class="kpi" style="--c:var(--exp)"><div class="v">0</div><div class="l">Explosive threats</div><div class="s">ALL CLEAR</div></div>
+          </div>
+
+          <div class="panel p-gauge">
+            <h4><span>CBRNE THREAT LEVEL</span><span>OVERALL</span></h4>
+            <div class="gauge">
+              <svg viewBox="0 0 240 140" aria-hidden="true">
+                <path d="M20 120 A100 100 0 0 1 220 120" fill="none" stroke="#1E2833" stroke-width="16" stroke-linecap="round"/>
+                <path id="gArc" d="M20 120 A100 100 0 0 1 220 120" fill="none" stroke="url(#gg)" stroke-width="16" stroke-linecap="round" stroke-dasharray="314.16" stroke-dashoffset="314.16"/>
+                <defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#6FE0A0"/><stop offset=".5" stop-color="#F5C518"/><stop offset="1" stop-color="#FF7A6B"/></linearGradient></defs>
+                <g id="needle" style="transform-origin:120px 120px;transform:rotate(-90deg);transition:transform 1.6s cubic-bezier(.2,.8,.2,1)"><line x1="120" y1="120" x2="120" y2="38" stroke="#E9EDF2" stroke-width="3" stroke-linecap="round"/><circle cx="120" cy="120" r="7" fill="#E9EDF2"/></g>
+                <text x="20" y="138" fill="#8794A1" font-size="9" font-family="IBM Plex Mono">LOW</text><text x="196" y="138" fill="#8794A1" font-size="9" font-family="IBM Plex Mono">CRIT</text>
+              </svg>
+              <div class="lvl">LOW</div>
+              <div class="cap">OVERALL RISK ASSESSMENT</div>
+            </div>
+          </div>
+
+          <div class="panel p-chart">
+            <h4><span>RADIATION MONITORING · DOSE RATE (μSv/h)</span><span class="mono" id="clock">--:--:--</span></h4>
+            <canvas id="chart" aria-hidden="true"></canvas>
+          </div>
+
+          <div class="panel p-route route">
+            <h4><span>ROUTE SECURITY</span><span style="color:var(--green)">CLEARED</span></h4>
+            <svg viewBox="0 0 400 230" aria-hidden="true">
+              <defs><pattern id="mg" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#18212B" stroke-width="1"/></pattern></defs>
+              <rect width="400" height="230" fill="url(#mg)"/>
+              <path d="M10 60 C80 40 120 120 190 110 S300 30 390 70" fill="none" stroke="#1F2A35" stroke-width="10" stroke-linecap="round"/>
+              <path d="M0 180 C90 170 160 200 230 170 S340 150 400 190" fill="none" stroke="#1A232D" stroke-width="7"/>
+              <path id="route" d="M30 200 C70 150 110 170 150 130 S230 70 270 100 S340 120 370 40" fill="none" stroke="#F5C518" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 6"/>
+              <g fill="none" stroke="#6FE0A0" stroke-width="1.5">
+                <circle cx="150" cy="130" r="6"/><circle cx="270" cy="100" r="6"/><circle cx="370" cy="40" r="6"/>
+              </g>
+              <g fill="#6FE0A0" font-family="IBM Plex Mono" font-size="9"><text x="160" y="146">CP-1</text><text x="280" y="116">CP-2</text><text x="330" y="30">DEST</text></g>
+              <circle id="convoy" r="7" fill="#F5C518"/>
+              <circle id="convoyRing" r="7" fill="none" stroke="#F5C518" stroke-width="1.5"/>
+            </svg>
+          </div>
+
+          <div class="panel p-feed">
+            <h4><span>PROXIMITY ALERTS</span><span>FEED</span></h4>
+            <div class="feed" id="feed"></div>
+          </div>
+
+          <div class="panel p-ai">
+            <h4><span>AI ANALYST</span><span style="color:var(--green)">ONLINE</span></h4>
+            <div class="ai-q">Generate security briefing</div>
+            <div class="ai-a" id="aiTyped"></div>
+          </div>
+        </div>
+      </div>
+      <p class="dash-note">Illustrative interface with simulated data. Operational deployments, locations and readings are restricted.</p>
+    </div>
+
+    <div class="sentry-feats">
+      <div class="sf" data-reveal style="--i:0"><h3>Personal sensors</h3><p>Wearable and vehicle-mounted detectors stream radiation, chemical and environmental readings in real time.</p></div>
+      <div class="sf" data-reveal style="--i:1"><h3>Route security</h3><p>Routes are assessed before and during movement, with checkpoints cleared against live sensor data.</p></div>
+      <div class="sf" data-reveal style="--i:2"><h3>Surveillance</h3><p>Proximity alerts and perimeter status in one view, so the protection team sees what matters first.</p></div>
+      <div class="sf" data-reveal style="--i:3"><h3>AI briefings</h3><p>An AI analyst summarises the situation in plain language and generates scientific reports on request.</p></div>
+    </div>
+    <div class="sentry-cta" data-reveal><a class="btn btn-gold" href="#contact">Request a Sentry demonstration</a></div>
+  </div>
+</section>
+
+<!-- CAPABILITIES (horizontal) -->
+<section id="caps" class="pin" aria-label="Operational focus">
+  <div class="pin-stage caps-stage">
+    <div class="wrap caps-head">
+      <p class="kicker">Operational focus</p>
+      <h2 class="disp h2">Built for high-consequence environments.</h2>
+    </div>
+    <div class="caps-track" id="capsTrack">
+      <article class="capcard"><span class="num">01</span><div><h3>CBRN intelligence</h3><p>Detection support, threat knowledge and decision aids for chemical, biological, radiological and nuclear scenarios.</p></div></article>
+      <article class="capcard"><span class="num">02</span><div><h3>VVIP protection</h3><p>Continuous CBRNE monitoring around protected persons, routes and venues, with alerts the moment conditions change.</p></div></article>
+      <article class="capcard"><span class="num">03</span><div><h3>Mission-critical analytics</h3><p>Analytics designed for situations where speed and accuracy cannot be traded against each other.</p></div></article>
+      <article class="capcard"><span class="num">04</span><div><h3>Resilience and public safety</h3><p>Systems that help national institutions prepare for, respond to and recover from emergencies.</p></div></article>
+      <article class="capcard"><span class="num">05</span><div><h3>Secure sovereign platforms</h3><p>AI infrastructure deployed in-country, with access controls suited to defence and government use.</p></div></article>
     </div>
   </div>
 </section>
 
+<!-- PORTFOLIO -->
 <section id="portfolio" class="sec">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <div>
-        <p class="kicker">Portfolio</p>
-        <h2 class="disp h2">Systems and platforms</h2>
+        <p class="kicker" data-reveal>Portfolio</p>
+        <h2 class="disp h2" data-split>Systems and platforms</h2>
       </div>
-      <p class="lead">One mission across every platform: intelligent systems that Uganda owns and controls.</p>
+      <p class="lead" data-reveal style="--i:2">One mission across every platform: intelligent systems that Uganda owns and controls.</p>
     </div>
-    <div class="big reveal">
-      <article class="card flag-card">
+    <div class="big">
+      <article class="card flag-card tilt" data-reveal style="--i:0">
         <div class="card-top"><span class="tag">FLAGSHIP</span><span class="live">LIVE</span></div>
         <h3 class="disp">CBRN Intelligence Model</h3>
         <p>Sovereign AI for chemical, biological, radiological and nuclear threat intelligence and decision support.</p>
         <a href="https://sisiwenyewe-ai.netlify.app" target="_blank" rel="noopener">Launch model →</a>
       </article>
-      <article class="card">
+      <article class="card tilt" data-reveal style="--i:1">
+        <div class="card-top"><span class="tag">PROTECTION INTELLIGENCE</span><span class="restricted">RESTRICTED</span></div>
+        <h3 class="disp">Sentry</h3>
+        <p>Live CBRNE monitoring for VVIP protection: personal sensors, route security, surveillance and AI briefings in one command view.</p>
+        <a href="#contact">Request a demonstration →</a>
+      </article>
+    </div>
+    <div class="big">
+      <article class="card tilt" data-reveal style="--i:0">
+        <div class="card-top"><span class="tag">ACCESS CONTROL</span><span class="live">LIVE</span></div>
+        <h3 class="disp">Nooha</h3>
+        <p>Visitor management for secure facilities: registration, approval and tracking of everyone who enters, with an integrated fuel management system.</p>
+        <a href="https://nooha.sisiwenyewe.com/" target="_blank" rel="noopener">Open Nooha →</a>
+      </article>
+      <article class="card tilt" data-reveal style="--i:1">
+        <div class="card-top"><span class="tag">DATA COLLECTION</span><span class="live">LIVE</span></div>
+        <h3 class="disp">Gamba Nogu</h3>
+        <p>Secure form intelligence: build forms, collect responses from the field and analyse the results in one protected environment.</p>
+        <a href="https://gambanogu.sisiwenyewe.com/" target="_blank" rel="noopener">Open Gamba Nogu →</a>
+      </article>
+      <article class="card tilt" data-reveal style="--i:2">
         <div class="card-top"><span class="tag">LANGUAGE AI</span><span class="live">LIVE</span></div>
         <h3 class="disp">Umojai</h3>
         <p>A bilingual English–Kiswahili language model, built on hyper-heuristics research, for nuanced communication across both languages.</p>
         <a href="https://umojai.com" target="_blank" rel="noopener">Visit umojai.com →</a>
       </article>
     </div>
-    <div class="big reveal">
-      <article class="card">
-        <div class="card-top"><span class="tag">ACCESS CONTROL</span><span class="live">LIVE</span></div>
-        <h3 class="disp">Nooha</h3>
-        <p>Visitor management for secure facilities: registration, approval and tracking of everyone who enters, with an integrated fuel management system.</p>
-        <a href="https://nooha.sisiwenyewe.com/" target="_blank" rel="noopener">Open Nooha →</a>
-      </article>
-      <article class="card">
-        <div class="card-top"><span class="tag">DATA COLLECTION</span><span class="live">LIVE</span></div>
-        <h3 class="disp">Gamba Nogu</h3>
-        <p>Secure form intelligence: build forms, collect responses from the field and analyse the results in one protected environment.</p>
-        <a href="https://gambanogu.sisiwenyewe.com/" target="_blank" rel="noopener">Open Gamba Nogu →</a>
-      </article>
-    </div>
-    <div class="small reveal">
-      <article class="soon"><span class="tag">IN DEVELOPMENT</span><h3>Secure Intranet</h3><p>More details coming soon.</p></article>
-      <article class="soon"><span class="tag">IN DEVELOPMENT</span><h3>More systems</h3><p>Further platforms will be announced as they are cleared for release.</p></article>
+    <div class="small">
+      <article class="soon" data-reveal style="--i:0"><span class="tag">IN DEVELOPMENT</span><h3>Secure Intranet</h3><p>More details coming soon.</p></article>
+      <article class="soon" data-reveal style="--i:1"><span class="tag">IN DEVELOPMENT</span><h3>More systems</h3><p>Further platforms will be announced as they are cleared for release.</p></article>
     </div>
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="sec about">
   <div class="wrap">
-    <div class="about-l reveal">
-      <p class="kicker">About</p>
-      <h2 class="disp">Sisi wenyewe.<br><span>We ourselves.</span></h2>
-    </div>
-    <div class="about-r reveal">
-      <p>Our name is our conviction: a nation's most sensitive intelligence should be built by its own people, on its own infrastructure, under its own control.</p>
-      <p>Sisiwenyewe Tech Uganda develops secure AI systems for defence and national institutions, from intelligence models to the sovereign platforms they run on.</p>
-      <p>Our work is grounded in original research in hyper-heuristics: AI that selects and adapts its own problem-solving strategies, so it stays reliable when conditions change.</p>
+    <p class="kicker" data-reveal>About · Sisi wenyewe means “we ourselves”</p>
+    <p class="statement" id="statement">Our name is our conviction: a nation's most sensitive intelligence should be built by its own people, on its own infrastructure, under its own control. <span data-gold>Sisi wenyewe.</span></p>
+    <div class="about-grid">
+      <p data-reveal>Sisiwenyewe Tech Uganda develops secure AI systems for defence and national institutions, from intelligence models to the sovereign platforms they run on. Our work is grounded in original research in hyper-heuristics: AI that selects and adapts its own problem-solving strategies, so it stays reliable when conditions change.</p>
       <div class="vals">
-        <div class="val"><b>Sovereign</b><span>Data and models under national control.</span></div>
-        <div class="val"><b>Secure</b><span>Engineered for defence-grade use.</span></div>
-        <div class="val"><b>Research-led</b><span>Grounded in original AI research.</span></div>
+        <div class="val" data-reveal style="--i:0"><b>Sovereign</b><span>Data and models under national control.</span></div>
+        <div class="val" data-reveal style="--i:1"><b>Secure</b><span>Engineered for defence-grade use.</span></div>
+        <div class="val" data-reveal style="--i:2"><b>Research-led</b><span>Grounded in original AI research.</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="sec gridbg contact" style="border-bottom:0">
+<!-- CONTACT -->
+<section id="contact" class="sec gridbg contact">
   <div class="wrap">
-    <div class="contact-l reveal">
-      <p class="kicker">Contact</p>
-      <h2 class="disp h2">Request a briefing.</h2>
-      <p class="lead">For institutions exploring secure AI for defence, intelligence or public safety. Requests are handled confidentially.</p>
-      <div class="cinfo">
+    <div class="contact-l">
+      <p class="kicker" data-reveal>Contact</p>
+      <h2 class="disp h2" data-split>Request a briefing.</h2>
+      <p class="lead" data-reveal style="--i:2">For institutions exploring secure AI for defence, intelligence or public safety. Requests are handled confidentially.</p>
+      <div class="cinfo" data-reveal style="--i:3">
         <p><span>EMAIL</span><a href="mailto:info@sisiwenyewe.com">info@sisiwenyewe.com</a></p>
         <p><span>LOCATION</span>Kampala, Uganda</p>
       </div>
     </div>
-    <form id="brief" class="reveal" novalidate>
+    <form id="brief" data-reveal="scale" novalidate>
       <label>Full name<input name="name" type="text" autocomplete="name" required></label>
       <label>Institution<input name="org" type="text" autocomplete="organization" required></label>
       <label>Official email<input name="email" type="email" autocomplete="email" required></label>
       <label>Area of interest
-        <select name="topic"><option>CBRN Intelligence Model</option><option>Nooha</option><option>Gamba Nogu</option><option>Umojai</option><option>Sovereign AI platforms</option><option>Other</option></select>
+        <select name="topic"><option>CBRN Intelligence Model</option><option>Sentry</option><option>Nooha</option><option>Gamba Nogu</option><option>Umojai</option><option>Sovereign AI platforms</option><option>Other</option></select>
       </label>
       <label class="full">Message<textarea name="msg" rows="4"></textarea></label>
       <button type="submit" class="btn btn-gold">Send request</button>
@@ -434,63 +672,242 @@ footer nav a{color:var(--muted)}
 </main>
 
 <footer>
-  <div class="wrap">
+  <div class="foot-big" aria-hidden="true">SISIWENYEWE</div>
+  <div class="wrap row">
     <span>© <span id="yr">2026</span> Sisiwenyewe Tech Uganda. All rights reserved.</span>
-    <nav aria-label="Footer"><a href="#cbrn">CBRN Model</a><a href="https://umojai.com" target="_blank" rel="noopener">Umojai</a><a href="#contact">Contact</a></nav>
+    <nav aria-label="Footer"><a href="#model">CBRN Model</a><a href="#sentry">Sentry</a><a href="https://umojai.com" target="_blank" rel="noopener">Umojai</a><a href="#contact">Contact</a></nav>
   </div>
 </footer>
 
 <script>
 (function(){
+  'use strict';
   var EMAIL='info@sisiwenyewe.com';
-  document.getElementById('yr').textContent=new Date().getFullYear();
-  var btn=document.getElementById('menuBtn'),links=document.getElementById('links');
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root=document.documentElement;
+  if(!reduce)root.classList.add('anim');
+  var $=function(s,c){return (c||document).querySelector(s);},$$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s));};
+  $('#yr').textContent=new Date().getFullYear();
+
+  /* intro */
+  var intro=$('#intro');
+  function endIntro(){if(intro)intro.classList.add('done');}
+  if(reduce)endIntro();else{setTimeout(endIntro,1500);}
+
+  /* menu */
+  var btn=$('#menuBtn'),links=$('#links');
   btn.addEventListener('click',function(){var o=links.classList.toggle('open');btn.setAttribute('aria-expanded',o);});
   links.addEventListener('click',function(e){if(e.target.tagName==='A'){links.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
-  } else {document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
 
-  /* Hero: sensor mesh with radar sweep */
+  /* split words for headline reveals */
+  function split(el){
+    var i=0;
+    (function walk(node){
+      Array.prototype.slice.call(node.childNodes).forEach(function(n){
+        if(n.nodeType===3){
+          var parts=n.textContent.split(/(\s+)/),frag=document.createDocumentFragment();
+          parts.forEach(function(p){
+            if(!p)return;
+            if(/^\s+$/.test(p)){frag.appendChild(document.createTextNode(' '));return;}
+            var w=document.createElement('span');w.className='w';
+            var inner=document.createElement('span');inner.textContent=p;inner.style.setProperty('--i',i++);
+            w.appendChild(inner);frag.appendChild(w);
+          });
+          n.parentNode.replaceChild(frag,n);
+        }else if(n.nodeType===1){walk(n);}
+      });
+    })(el);
+  }
+  $$('[data-split]').forEach(split);
+
+  /* statement words for scroll fill */
+  var st=$('#statement'),sWords=[];
   (function(){
-    var c=document.getElementById('mesh');if(!c||!c.getContext)return;
+    var gold=st.querySelector('[data-gold]'),goldText=gold?gold.textContent:'';
+    if(gold)gold.remove();
+    var text=st.textContent.trim();st.textContent='';
+    function add(t,g){t.split(/\s+/).forEach(function(w){if(!w)return;var s=document.createElement('span');s.className='sw'+(g?' gold':'');s.textContent=w;st.appendChild(s);st.appendChild(document.createTextNode(' '));sWords.push(s);});}
+    add(text,false);add(goldText,true);
+  })();
+
+  /* reveal on view */
+  var revealEls=$$('[data-reveal],[data-split]');
+  if(reduce||!('IntersectionObserver' in window)){revealEls.forEach(function(e){e.classList.add('in');});}
+  else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+    revealEls.forEach(function(e){io.observe(e);});
+  }
+
+  /* ---------- scroll engine ---------- */
+  var hdr=$('#hdr'),prog=$('#progress'),heroCopy=$('#heroCopy'),heroConsole=$('#heroConsole');
+  var cbrne=$('#cbrne'),letters=$$('.letters span'),dName=$('#domainName'),dText=$('#domainText'),dBox=$('#domain'),cBar=$('#cbrneBar');
+  var pipe=$('#pipe'),steps=$$('.step',pipe),pLine=$('.pipe-line',pipe);
+  var dash=$('#dash'),caps=$('#caps'),track=$('#capsTrack');
+  var domains=[
+    ['Chemical','Toxic industrial chemicals and warfare agents, identified from sensor signatures and field symptoms.'],
+    ['Biological','Pathogens and toxins, from early indicators to protective measures and medical countermeasures.'],
+    ['Radiological','Radiation sources and dose rates, monitored continuously by personal and fixed sensors.'],
+    ['Nuclear','Nuclear materials and events, assessed against national and international safety thresholds.'],
+    ['Explosive','Explosive threats, folded into the same picture so protection teams see every risk at once.']
+  ];
+  var curDomain=0,lastY=window.scrollY,smooth={};
+  function prog01(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-window.innerHeight;return h>0?Math.min(1,Math.max(0,-r.top/h)):0;}
+  function inView(el){var r=el.getBoundingClientRect();return Math.min(1,Math.max(0,(window.innerHeight-r.top)/(window.innerHeight+r.height)));}
+  function lerp(k,target){var v=smooth[k];if(v===undefined)v=target;v+= (target-v)*0.14;if(Math.abs(target-v)<0.0005)v=target;smooth[k]=v;return v;}
+  function setDomain(i){
+    if(i===curDomain)return;curDomain=i;
+    dBox.classList.add('out');
+    setTimeout(function(){dName.textContent=domains[i][0];dText.textContent=domains[i][1];dBox.classList.remove('out');},250);
+  }
+  var horiz=window.matchMedia('(min-width: 901px)');
+  function tick(){
+    var y=window.scrollY,dh=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(dh>0?y/dh:0)+')';
+    hdr.classList.toggle('solid',y>40);
+    hdr.classList.toggle('hide',y>600&&y>lastY+2&&!links.classList.contains('open'));
+    if(y<lastY-2)hdr.classList.remove('hide');
+    lastY=y;
+    if(!reduce){
+      /* hero exit */
+      var hp=lerp('hero',Math.min(1,y/(window.innerHeight*.9)));
+      heroCopy.style.transform='translateY('+(-hp*90)+'px)';heroCopy.style.opacity=String(1-hp*1.1);
+      heroConsole.style.transform='translateY('+(-hp*160)+'px) rotate('+(hp*-3)+'deg)';
+      /* CBRNE */
+      var cp=prog01(cbrne),idx=Math.min(4,Math.floor(cp*5.0001));
+      letters.forEach(function(l,i){l.classList.toggle('on',i===idx&&cp>0);l.classList.toggle('past',i<idx);});
+      if(cp>0)setDomain(idx);
+      cBar.style.transform='scaleX('+lerp('cb',cp)+')';
+      /* pipeline */
+      var pp=lerp('pipe',Math.min(1,Math.max(0,(inView(pipe)-.25)/.4)));
+      pLine.style.setProperty('--p',pp);
+      steps.forEach(function(s,i){s.classList.toggle('lit',pp>=(i/3)-.02&&pp>0.02);});
+      /* dashboard tilt-in */
+      var dp=lerp('dash',Math.min(1,Math.max(0,(inView(dash)-.08)/.45)));
+      dash.style.transform='rotateX('+((1-dp)*28)+'deg) scale('+(.86+dp*.14)+') translateY('+((1-dp)*60)+'px)';
+      dash.style.opacity=String(.35+dp*.65);
+      /* horizontal caps */
+      if(horiz.matches){
+        var hp2=lerp('caps',prog01(caps)),max=track.scrollWidth-window.innerWidth;
+        track.style.transform='translateX('+(-hp2*Math.max(0,max))+'px)';
+      }
+      /* statement fill */
+      var sp=Math.min(1,Math.max(0,(inView(st)-.2)/.45)),n=Math.round(sp*sWords.length);
+      sWords.forEach(function(w,i){w.classList.toggle('on',i<n);});
+    }
+    requestAnimationFrame(tick);
+  }
+  if(reduce){sWords.forEach(function(w){w.classList.add('on');});steps.forEach(function(s){s.classList.add('lit');});pLine.style.setProperty('--p',1);letters[0].classList.add('on');}
+  requestAnimationFrame(tick);
+
+  /* card spotlight + tilt */
+  if(!reduce&&window.matchMedia('(hover:hover)').matches){
+    $$('.tilt').forEach(function(c){
+      c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+        c.style.setProperty('--mx',(x*100)+'%');c.style.setProperty('--my',(y*100)+'%');
+        c.style.transform='perspective(900px) rotateY('+((x-.5)*6)+'deg) rotateX('+((.5-y)*6)+'deg) translateY(-3px)';});
+      c.addEventListener('mouseleave',function(){c.style.transform='';});
+    });
+  }
+
+  /* typewriter helper */
+  function typer(el,lines,speed){
+    var full=lines.join('\n'),i=0,timer=null,active=false;
+    function step(){if(!active)return;i++;el.textContent=full.slice(0,i);
+      if(i<full.length)timer=setTimeout(step,speed);else timer=setTimeout(function(){i=0;step();},4200);}
+    return{start:function(){if(active)return;active=true;if(reduce){el.textContent=full;return;}step();},stop:function(){active=false;clearTimeout(timer);}};
+  }
+  var heroT=typer($('#heroTyped'),['Key agents: anthrax, botulinum toxin, ricin.','Watch for: clusters of fever and respiratory signs,','unexplained animal deaths, suspicious powders.'],22);
+  var aiT=typer($('#aiTyped'),['Situation: manageable.','• Perimeter secure','• No radiation or nuclear threats','• PPE functioning normally','Next update in 15 minutes.'],30);
+  setTimeout(function(){heroT.start();},reduce?0:1700);
+
+  /* ---------- hero radar mesh ---------- */
+  (function(){
+    var c=$('#mesh');if(!c||!c.getContext)return;
     var x=c.getContext('2d'),W=0,H=0,dpr=Math.min(window.devicePixelRatio||1,2),N=[],t0=performance.now(),run=true;
-    var still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
     function size(){var r=c.getBoundingClientRect();W=r.width;H=r.height;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);
-      var n=Math.round(Math.min(110,Math.max(40,W*H/14000)));N=[];
-      for(var i=0;i<n;i++)N.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,g:0,s:Math.random()<.12});}
+      var n=Math.round(Math.min(120,Math.max(40,W*H/13000)));N=[];
+      for(var i=0;i<n;i++)N.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.2,g:0,s:Math.random()<.12});}
     function frame(now){
       var t=(now-t0)/1000,cx=W*.66,cy=H*.5,R=Math.hypot(W,H)*.75,ang=(t*.55)%(Math.PI*2);
       x.clearRect(0,0,W,H);
-      /* range rings */
       x.strokeStyle='rgba(245,197,24,0.13)';x.lineWidth=1;
       for(var k=1;k<=5;k++){x.beginPath();x.arc(cx,cy,k*R/6,0,Math.PI*2);x.stroke();}
-      /* sweep */
-      if(!still){var grd=x.createConicGradient?x.createConicGradient(ang-0.9,cx,cy):null;
-        if(grd){grd.addColorStop(0,'rgba(245,197,24,0)');grd.addColorStop(0.14,'rgba(245,197,24,0.16)');grd.addColorStop(0.1433,'rgba(245,197,24,0.0)');grd.addColorStop(1,'rgba(245,197,24,0)');
+      if(!reduce){var grd=x.createConicGradient?x.createConicGradient(ang-0.9,cx,cy):null;
+        if(grd){grd.addColorStop(0,'rgba(245,197,24,0)');grd.addColorStop(0.14,'rgba(245,197,24,0.17)');grd.addColorStop(0.1433,'rgba(245,197,24,0.0)');grd.addColorStop(1,'rgba(245,197,24,0)');
           x.fillStyle=grd;x.beginPath();x.moveTo(cx,cy);x.arc(cx,cy,R,ang-0.9,ang);x.closePath();x.fill();}
-        x.strokeStyle='rgba(245,197,24,0.35)';x.beginPath();x.moveTo(cx,cy);x.lineTo(cx+Math.cos(ang)*R,cy+Math.sin(ang)*R);x.stroke();}
-      /* nodes */
+        x.strokeStyle='rgba(245,197,24,0.38)';x.beginPath();x.moveTo(cx,cy);x.lineTo(cx+Math.cos(ang)*R,cy+Math.sin(ang)*R);x.stroke();}
       for(var i=0;i<N.length;i++){var p=N[i];
-        if(!still){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
-          var a=Math.atan2(p.y-cy,p.x-cx);if(a<0)a+=Math.PI*2;var d=ang-a;if(d<0)d+=Math.PI*2;if(d<0.08)p.g=1;p.g*=0.985;}
-      }
-      x.lineWidth=1;
+        if(!reduce){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+          var a=Math.atan2(p.y-cy,p.x-cx);if(a<0)a+=Math.PI*2;var d=ang-a;if(d<0)d+=Math.PI*2;if(d<0.08)p.g=1;p.g*=0.985;}}
       for(var i=0;i<N.length;i++)for(var j=i+1;j<N.length;j++){var a1=N[i],b=N[j],dx=a1.x-b.x,dy=a1.y-b.y,dd=dx*dx+dy*dy;
         if(dd<16000){var o=(1-dd/16000)*(0.18+Math.max(a1.g,b.g)*0.45);x.strokeStyle='rgba(200,215,230,'+o.toFixed(3)+')';x.beginPath();x.moveTo(a1.x,a1.y);x.lineTo(b.x,b.y);x.stroke();}}
       for(var i=0;i<N.length;i++){var p=N[i],r=p.s?2.4:1.5;
         x.fillStyle=p.s?'rgba(245,197,24,'+(0.45+p.g*0.55)+')':'rgba(200,215,230,'+(0.5+p.g*0.5)+')';
         x.beginPath();x.arc(p.x,p.y,r+p.g*1.5,0,Math.PI*2);x.fill();
         if(p.s&&p.g>0.2){x.strokeStyle='rgba(245,197,24,'+(p.g*0.5)+')';x.beginPath();x.arc(p.x,p.y,4+(1-p.g)*14,0,Math.PI*2);x.stroke();}}
-      if(run&&!still)requestAnimationFrame(frame);
+      if(run&&!reduce)requestAnimationFrame(frame);
     }
-    size();addEventListener('resize',function(){size();if(still)frame(performance.now());});
+    size();addEventListener('resize',function(){size();if(reduce)frame(performance.now());});
     if('IntersectionObserver' in window)new IntersectionObserver(function(e){var v=e[0].isIntersecting;if(v&&!run){run=true;requestAnimationFrame(frame);}run=v;}).observe(c);
-    document.addEventListener('visibilitychange',function(){if(document.hidden)run=false;else if(!run){run=true;requestAnimationFrame(frame);}});
     requestAnimationFrame(frame);
   })();
-  document.getElementById('brief').addEventListener('submit',function(e){
+
+  /* ---------- Sentry simulated dashboard ---------- */
+  (function(){
+    var on=false,started=false,timers=[];
+    var doseEl=$('#dose'),cpsEl=$('#cps'),clock=$('#clock'),feed=$('#feed'),cv=$('#chart'),cx=cv.getContext('2d');
+    var route=$('#route'),convoy=$('#convoy'),ring=$('#convoyRing'),L=route.getTotalLength();
+    var data=[],dose=0.11,cps=45;
+    for(var i=0;i<90;i++){dose=Math.min(.124,Math.max(.096,dose+(Math.random()-.5)*.004));data.push(dose);}
+    var msgs=[['Radiation sensor','Normal'],['Air quality','Within limits'],['Perimeter','Secure'],['Checkpoint CP-1','Cleared'],['Personal sensor','Online'],['Route segment','Cleared'],['Chemical detector','No agents'],['Checkpoint CP-2','Cleared']],mi=0;
+    function hhmmss(){var d=new Date();return d.toTimeString().slice(0,8);}
+    function draw(){
+      var w=cv.clientWidth,h=cv.clientHeight,dpr=Math.min(window.devicePixelRatio||1,2);
+      if(cv.width!==Math.round(w*dpr)){cv.width=Math.round(w*dpr);cv.height=Math.round(h*dpr);}
+      cx.setTransform(dpr,0,0,dpr,0,0);cx.clearRect(0,0,w,h);
+      var min=.09,max=.13,pad=6;
+      cx.strokeStyle='#18212B';cx.lineWidth=1;cx.fillStyle='#5E6B78';cx.font='10px IBM Plex Mono, monospace';
+      for(var g=0;g<=4;g++){var yy=pad+(h-2*pad)*g/4;cx.beginPath();cx.moveTo(40,yy);cx.lineTo(w,yy);cx.stroke();cx.fillText((max-(max-min)*g/4).toFixed(3),0,yy+3);}
+      function px(i){return 40+(w-40)*i/(data.length-1);}function py(v){return pad+(h-2*pad)*(1-(v-min)/(max-min));}
+      var grad=cx.createLinearGradient(0,0,0,h);grad.addColorStop(0,'rgba(245,197,24,.28)');grad.addColorStop(1,'rgba(245,197,24,0)');
+      cx.beginPath();cx.moveTo(px(0),h);for(var i=0;i<data.length;i++)cx.lineTo(px(i),py(data[i]));cx.lineTo(px(data.length-1),h);cx.closePath();cx.fillStyle=grad;cx.fill();
+      cx.beginPath();for(var i=0;i<data.length;i++){i?cx.lineTo(px(i),py(data[i])):cx.moveTo(px(i),py(data[i]));}cx.strokeStyle='#F5C518';cx.lineWidth=2;cx.stroke();
+      var lx=px(data.length-1),ly=py(data[data.length-1]);cx.fillStyle='#F5C518';cx.beginPath();cx.arc(lx,ly,4,0,7);cx.fill();
+      cx.strokeStyle='rgba(245,197,24,.4)';cx.beginPath();cx.arc(lx,ly,9,0,7);cx.stroke();
+    }
+    function pushReading(){
+      dose=Math.min(.124,Math.max(.096,dose+(Math.random()-.5)*.005));cps=Math.round(38+(dose-.096)/.028*18+Math.random()*3);
+      data.push(dose);data.shift();doseEl.textContent=dose.toFixed(3);cpsEl.textContent=cps;clock.textContent=hhmmss();draw();
+    }
+    function pushAlert(){
+      var m=msgs[mi++%msgs.length],d=document.createElement('div');d.className='fi';
+      d.innerHTML='<i></i><span></span><span></span>';d.children[1].textContent=m[0]+' · '+m[1];d.children[2].textContent=hhmmss();
+      feed.insertBefore(d,feed.firstChild);while(feed.children.length>5)feed.removeChild(feed.lastChild);
+    }
+    var t0=null;
+    function moveConvoy(ts){
+      if(!on)return;if(t0===null)t0=ts;var p=((ts-t0)/14000)%1,pt=route.getPointAtLength(p*L);
+      convoy.setAttribute('cx',pt.x);convoy.setAttribute('cy',pt.y);ring.setAttribute('cx',pt.x);ring.setAttribute('cy',pt.y);
+      var rp=((ts-t0)/1200)%1;ring.setAttribute('r',7+rp*14);ring.setAttribute('opacity',1-rp);
+      route.style.strokeDashoffset=String(-(ts/60)%12);
+      requestAnimationFrame(moveConvoy);
+    }
+    function start(){
+      if(on)return;on=true;
+      if(!started){started=true;for(var k=0;k<4;k++)pushAlert();
+        setTimeout(function(){$('#gArc').style.transition='stroke-dashoffset 1.8s cubic-bezier(.2,.8,.2,1)';$('#gArc').style.strokeDashoffset=String(314.16*(1-.25));$('#needle').style.transform='rotate('+(-90+180*.25)+'deg)';},300);}
+      draw();timers.push(setInterval(pushReading,reduce?4000:700));timers.push(setInterval(pushAlert,3200));
+      aiT.start();requestAnimationFrame(moveConvoy);
+    }
+    function stop(){on=false;timers.forEach(clearInterval);timers=[];aiT.stop();}
+    var pt0=route.getPointAtLength(0);convoy.setAttribute('cx',pt0.x);convoy.setAttribute('cy',pt0.y);
+    clock.textContent=hhmmss();draw();
+    if('IntersectionObserver' in window){new IntersectionObserver(function(e){e[0].isIntersecting?start():stop();},{threshold:.1}).observe(dash);}else start();
+    addEventListener('resize',draw);
+  })();
+
+  /* form */
+  $('#brief').addEventListener('submit',function(e){
     e.preventDefault();var f=e.target;
     if(!f.reportValidity())return;
     var body='Name: '+f.name.value+'\nInstitution: '+f.org.value+'\nEmail: '+f.email.value+'\nInterest: '+f.topic.value+'\n\n'+f.msg.value;
